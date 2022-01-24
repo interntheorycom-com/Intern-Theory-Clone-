@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment_page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="headercss.css">
+
+    <style>
+        .information {
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-top: 0px;
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            display: block;
+
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        button {
+            border: none;
+            width: 100px;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: red;
+            color: black;
+        }
+
+        span {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+          <!-- ------ side bar -->
+          <input type="checkbox" id="check">
+          <label for="check">
+              <i class="fas fa-bars" id="btn2"></i>
+              <i class="fas fa-times" id="cancel"></i>
+          </label>
+          <!-- Side Bar -->
+          <div class="sidebar">
+              <h1 id="home"> <a href="ashu_index.html">Home</a></h1>
+              <ul>
+                <li><a href="internship.html"><i class="fas fa-qrcode"></i>Internships</a></li>
+                <li><a href="jobs.html"><i class="fas fa-briefcase"></i>Jobs</a></li>
+                <li><a href="#"><i class="fas fa-network-wired"></i>Goverment Jobs</a></li>
+                <li><a href="online-courses.html"><i class="fas fa-laptop-code"></i>online-courses</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i>FAQ</a></li>
+                <li><a href="#testimonial"><i class="fas fa-sliders-h"></i>About</a></li>
+                <li><a href="footer"><i class="far fa-envelope"></i>Contacts</a></li>
+                <li><a href="studentRegister.html"><i class="fas fa-user-graduate"></i>Student</a></li>
+                <li><a href="companyRegister.html"><i class="far fa-building"></i>Company</a></li>
+            </ul>
+          </div>
+          <!------------------- nav bar------------------------------------------------>
+          <div id="header">
+              <div id="container">
+                  <div class="navbar">
+                      <div class="logo">
+                          <a href="ashu_index.html"><img src="https://assets.interntheory.com/creative/logo.png"
+                                  alt="logo" width="150px"></a>
+                      </div>
+                      <!-- shop page and loging Page -->
+                      <a href="" id="shoping"> <i class="fas fa-shopping-bag"></i> </a>
+                      <a href="studentLoginAndCompnayLogin.html" class="signbtn">LOGIN</a>
+                  </div>
+    </header>
+    <div class="information">
+        <form action="">
+            <select name="upi" id="bank" required>
+                <option value="">--</option>
+                <option value="indianbank">Indian Bank</option>
+                <option value="SBI">SBI</option>
+                <option value="BOI">BOI</option>
+                <option value="kotak">kotak</option>
+            </select><span>Select Your Bank</span>
+            <label for="cardNumber">cardNumber</label>
+            <input type="text" id="cardNumber" required>
+            <label for="date">Expire-Date</label>
+            <input type="text" id="date" required>
+            <label for="cvv">cvv</label>
+            <input type="text" id="cvv" maxlength="3" required>
+            <label for="nicNumber">card-Holder-Number</label>
+            <input type="text" id="nicNumber" required>
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+    finalbill = JSON.parse(localStorage.getItem("finalbill")) || "20,000";
+    var conform = document.createElement("h2")
+    conform.innerHTML = "Your Amount : &emsp;" + "&#x20B9;" + finalbill;
+    var conformAmount = document.createElement("button");
+    conformAmount.innerHTML = "Send Opt"
+    conformAmount.setAttribute("type", "submit")
+    document.querySelector("form").append(conform, conformAmount)
+
+    document.querySelector("form").addEventListener("submit", function () {
+    event.preventDefault()
+    var atm = document.querySelector("#bank").value
+    var number = document.querySelector("#cardNumber").value
+    var edate = document.querySelector("#date").value
+    var cvv = document.querySelector("#cvv").value
+    var nam = document.querySelector("#nicNumber").value
+    
+    if(atm == "BOI" && number =="12" && edate == "24/01" && cvv == "123" && nam == "abhi"){     
+            alert("Send OtP")
+            var a = prompt("enter otp ")
+            if(a=="123")
+            {
+                alert("payment Success full")
+                window.location.href="card2.html"
+            }
+            else{
+                alert("wrong OTP")
+            }
+        }
+        else {
+            alert("ERROR!!!!!! Ditail Not Matched");
+        }
+    })
+
+</script>

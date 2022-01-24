@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student_Company_Login_page</title>
+    <link rel="stylesheet" href="studentRegister.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="headercss.css">
+    <link rel="stylesheet" href="styleHeadFoot.css">
+    <link rel="stylesheet" href="studentmedia.css">
+    
+    <style>
+        /* sctudent and comapnay button class */
+        .scbtn {
+            display: flex;
+            width: 450px;
+            height: 30px;
+            overflow: hidden;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .cscbtn>button {
+            width: 200px;
+            height: 42px;
+            background: none;
+            border-bottom: 1px solid black;
+            color: rgba(0, 0, 0, 0.657);
+            border-radius: 0px;
+        }
+
+        /* chaeck Box  */
+        #checkboxid {
+            width: 20px;
+            height: 25px;
+        }
+
+        .checkbox label {
+            font-size: 17px;
+            position: relative;
+            top: -5px;
+            left: 7px;
+
+        }
+
+        .checkbox a {
+            position: relative;
+            left: 200px;
+            top: -5px;
+        }
+
+        /* Ccreate Account anchar tag */
+        .creatA {
+            margin-top: 20px;
+
+        }
+
+        .creatA p {
+            text-align: center;
+            margin-left: -70px;
+        }
+
+        .checkbox {
+            margin-top: -15px;
+        }
+
+        /* icon google and facebook */
+        #fb,
+        #gl {
+            margin-top: 10px;
+        }
+
+        .form1,
+        .form2 {
+            display: none;
+        }
+        @media only screen and (max-width:550px){
+            .scbtn {
+    display: flex;
+    width: 350px;
+    height: 30px;
+    overflow: hidden;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.cscbtn>button {
+    width: 150px;
+    height: 42px;
+    background: none;
+    border-bottom: 1px solid black;
+    color: rgba(0, 0, 0, 0.657);
+    border-radius: 0px;
+}
+.checkbox a {
+    position: relative;
+    left: 65px;
+    top: -5px;
+}
+.creatA p {
+            text-align: center;
+            margin-left: -30px;
+        }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- ------ side bar -->
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn2"></i>
+            <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <!-- Side Bar -->
+        <div class="sidebar">
+            <h1 id="home"> <a href="ashu_index.html">Home</a></h1>
+            <ul>
+                <li><a href="internship.html"><i class="fas fa-qrcode"></i>Internships</a></li>
+                <li><a href="jobs.html"><i class="fas fa-briefcase"></i>Jobs</a></li>
+                <li><a href="#"><i class="fas fa-network-wired"></i>Goverment Jobs</a></li>
+                <li><a href="online-courses.html"><i class="fas fa-laptop-code"></i>online-courses</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i>FAQ</a></li>
+                <li><a href="#testimonial"><i class="fas fa-sliders-h"></i>About</a></li>
+                <li><a href="footer"><i class="far fa-envelope"></i>Contacts</a></li>
+                <li><a href="studentRegister.html"><i class="fas fa-user-graduate"></i>Student</a></li>
+                <li><a href="companyRegister.html"><i class="far fa-building"></i>Company</a></li>
+            </ul>
+        </div>
+        <!------------------- nav bar------------------------------------------------>
+        <div id="header">
+            <div id="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="ashu_index.html"><img src="https://assets.interntheory.com/creative/logo.png"
+                                alt="logo" width="150px"></a>
+                    </div>
+                    <!-- shop page and loging Page -->
+                    <a href="" id="shoping"> <i class="fas fa-shopping-bag"></i> </a>
+                    <a href="studentLoginAndCompnayLogin.html" class="signbtn">LOGIN</a>
+                </div>
+    </header>
+    <main>
+        <div id="first-layer" class="border">
+            <div id="Second-layer">
+                <div class="scbtn">
+                    <div class="cscbtn" id="sbtn"><button onclick="student()" id="student">STUDENT</button></div>
+                    <div class="cscbtn" id="cbtn"><button onclick="company()">COMPANY</button></div>
+                </div>
+                <div id="api-part">
+                    <div id="heding">
+                        <h1>Login</h1>
+                    </div>
+                    <div id="inqury" class="border">
+                        <p class="pera">If you are a company looking to hire interns, please register as a company by
+                            clicking
+                            &nbsp;<span><a href="#" target="_blank" target="_blank">here.</a></span></p>
+                    </div>
+                    <div id="api-option">
+                        <div id="fb">
+                            <i class="fab fa-facebook-square"></i>
+                            <button>LOGIN WITH FACEBOOK</button>
+                        </div>
+                        <div id="gl">
+                            <i class="fab fa-google"></i>
+                            <button>LOGIN WITH GOOGLE</button>
+                        </div>
+                    </div>
+                    <div>
+                        <P id="lineOr">------------------------------------------ OR --------------------------------------</P>
+                    </div>
+                </div>
+                <!-- firstname lastname email password-->
+                <div id="register-part">
+                    <form action="" class="form">
+                        <span class="notvalid">Required</span><span class="notvalid" id="secspan">Required</span>
+                        <div class="email labels-name ">
+                            <input type="text" id="email" placeholder="Enter Email" class="lable" required>
+                            <span class="lable-content">Email/Number*</span>
+                        </div><span class="notvalid">Required</span>
+
+                        <div class="password labels-name">
+                            <input type="password" id="password" placeholder="Enter Password" class="lable" required>
+                            <span class="lable-content">Password*</span>
+                        </div><span class="notvalid">Required</span>
+
+                        <div class="check ">
+                            <div class="checkbox"><input type="checkbox" id="checkboxid">
+                                <label for="checkboxid"> Remember Me</label> <span id="forgot"><a href="#"
+                                        target="_blank">Forgot password</a></span>
+                            </div>
+                            <div class="creatA">
+                                <p>Don't have an account? &nbsp;<a href="#" target="_blank" id="newAc">Create Your
+                                        Account</a></p>
+                            </div>
+
+                        </div>
+                        <div class="btn">
+                            <button type="submit"><span>Next</span></button>
+                        </div>
+                    </form>
+
+                    <form action="" class="form1">
+                        <span class="notvalid">Required</span><span class="notvalid" id="secspan">Required</span>
+                        <div class="email labels-name ">
+                            <input type="text" id="email1" placeholder="Enter Email" class="lable" required>
+                            <span class="lable-content">Email/Number*</span>
+                        </div><span class="notvalid">Required</span>
+
+                        <div class="password labels-name">
+                            <input type="password" id="password1" placeholder="Enter Password" class="lable" required>
+                            <span class="lable-content">Password*</span>
+                        </div><span class="notvalid">Required</span>
+
+                        <div class="check ">
+                            <div class="checkbox"><input type="checkbox" id="checkboxid">
+                                <label for="checkboxid"> Remember Me</label> <span id="forgot"><a href="#"
+                                        target="_blank">Forgot password</a></span>
+                            </div>
+                            <div class="creatA">
+                                <p>Don't have an account? &nbsp;<a href="#" target="_blank" id="newAc">Create Your
+                                        Account</a></p>
+                            </div>
+
+                        </div>
+                        <div class="btn">
+                            <button type="submit"><span>Next</span></button>
+                        </div>
+                    </form>
+
+                    <form action="" class="form2">
+                        <span class="notvalid">Required</span><span class="notvalid" id="secspan">Required</span>
+                        <div class="email labels-name ">
+                            <input type="text" id="email2" placeholder="Enter Email" class="lable" required>
+                            <span class="lable-content">Email/Number*</span>
+                        </div><span class="notvalid">Required</span>
+
+                        <div class="password labels-name">
+                            <input type="password" id="password2" placeholder="Enter Password" class="lable" required>
+                            <span class="lable-content">Password*</span>
+                        </div><span class="notvalid">Required</span>
+
+                        <div class="check ">
+                            <div class="checkbox"><input type="checkbox" id="checkboxid">
+                                <label for="checkboxid"> Remember Me</label> <span id="forgot"><a href="#"
+                                        target="_blank">Forgot password</a></span>
+                            </div>
+                            <div class="creatA">
+                                <p>Don't have an account? &nbsp;<a href="studentRegister.css" target="_blank" id="newAc">Create Your
+                                        Account</a></p>
+                            </div>
+
+                        </div>
+                        <div class="btn">
+                            <button type="submit"><span>Next</span></button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>   
+        <div class="contentFoot">
+            <div class="footb1">
+               
+                <div class="info">
+                    <div>
+                        <div>BY PLACE</div>
+                        <hr>
+                        <div>Internships In Mumbai</div>
+                        <div>Internships In Delhi</div>
+                        <div>Internships In Bangalore</div>
+                        <div>Internships In Pune</div>
+                        <div>Internships In Hyderabad</div>
+                    </div>
+                    <div>
+                        <div>BY PROFILE</div>
+                        <hr>
+                        <div>Marketing Internships</div>
+                        <div>Business Development Internships</div>
+                        <div>Content Writing Interships</div>
+                        <div>Graphic Design Internships</div>
+                        <div>HR internships</div>
+                        <div>Engineering Internships</div>
+                    </div>
+                    <div>
+                        <div>BY TYPE</div>
+                        <hr>
+                        <div>Full Time Internships</div>
+                        <div>Part Time Internships</div>
+                        <div>Work From Home Internships</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footb2">
+                <div>Find Intership</div>
+                <div>Post Intership</div>
+                <div>Courses</div>
+                <div>Terms&Conditions</div>
+                <div>Privacy Policy</div>
+                <div>Contact us</div>
+                <div>About us</div>
+                <div>Site us</div>
+            </div>
+            <hr>
+            <div class="footb3">
+                Team Sara
+            </div>
+        </footer>
+</body>
+
+</html>
+<script>
+
+    student_Register_arr = JSON.parse(localStorage.getItem("studennt_Register_arr")) || [];
+    document.querySelector(".form").addEventListener("submit", function () {
+        event.preventDefault();
+        var emailnumber = document.querySelector("#email").value;
+        var passwrd = document.querySelector("#password").value;
+        var loginSuccss = true;
+        // console.log(student_Register_arr)
+        for (var i = 0; i < student_Register_arr.length; i++) {
+            // console.log(student_Register_arr[i].phone,emailnumber,student_Register_arr[i].pass , passwrd)
+
+            if ((student_Register_arr[i].email == emailnumber || student_Register_arr[i].phone == emailnumber) && student_Register_arr[i].pass == passwrd) {
+                loginSuccss = true;
+                break;
+            }
+            else {
+                loginSuccss = false;
+            }
+        }
+        if (loginSuccss) {
+            alert("login Success");
+            window.location.href = "card2.html"
+        }
+        else {
+            alert("invalid details");
+        }
+    })
+
+
+    function student() {
+        document.querySelector(".form").style.display = "none"
+        document.querySelector(".form2").style.display = "none"
+        document.querySelector(".form1").style.display = "block"
+        //  student data taking through localStorage 
+        //student_Register_arr = JSON.parse(localStorage.getItem("studennt_Register_arr")) || [];
+        //Empty inquey id and append new value.
+        // document.querySelector("#inqury").textContent = "";
+        // var peragraf = document.createElement("p")
+        // peragraf.setAttribute("class", "pera")
+        // peragraf.innerHTML = "If you are a company looking to hire interns, please register as a company by clicking &nbsp;"
+        // var spn = document.createElement("span")
+        // var ancr = document.createElement("a")
+        // ancr.innerText = "here."
+        // ancr.setAttribute("href", "#")
+        // ancr.setAttribute("target", "_blank")
+        // spn.append(ancr);
+        // peragraf.append(spn);
+        // document.querySelector("#inqury").append(peragraf);
+
+        //Empty #api-option id and append new value.
+        document.querySelector("#api-option").textContent = "";
+        var divF = document.createElement("div");
+        divF.setAttribute("id", "fb")
+        var icon = document.createElement("i")
+        icon.setAttribute("class", "fab fa-facebook-square")
+        var btnF = document.createElement("button")
+        btnF.textContent = "LOGIN WITH FACEBOOK"
+        divF.append(icon, btnF)
+
+        var divG = document.createElement("div");
+        divG.setAttribute("id", "gl")
+        var icon = document.createElement("i")
+        icon.setAttribute("class", "fab fa-google")
+        var btnG = document.createElement("button")
+        btnG.textContent = "LOGIN WITH GOOGLE"
+        divG.append(icon, btnG)
+        document.querySelector("#api-option").append(divF, divG);
+
+        // //Empty #forgot id and append new value.
+        // document.querySelector("#forgot").textContent = "";
+        // var studentanchar = document.createElement("a");
+        // studentanchar.setAttribute("href", "#");
+        // studentanchar.setAttribute("target", "_blank");
+        // studentanchar.textContent = "Forgot password";
+        // document.querySelector("#forgot").append(studentanchar);
+
+        // //Empty create new acc. id newAc and append new value
+        // var newAc = document.querySelector("#newAc")
+        // newAc.setAttribute("href", "studentRegister.html")
+        // newAc.setAttribute("target", "_blank");
+
+        
+        // add Event for cheking your are Register Or not .
+        student_Register_arr = JSON.parse(localStorage.getItem("studennt_Register_arr")) || [];
+        document.querySelector(".form1").addEventListener("submit", function () {
+            event.preventDefault();
+            var emailnumber = document.querySelector("#email1").value;
+            var passwrd = document.querySelector("#password1").value;
+            var loginSuccss = true;
+            for (var i = 0; i < student_Register_arr.length; i++) {
+    
+
+                if ((student_Register_arr[i].email == emailnumber || student_Register_arr[i].phone == emailnumber) && student_Register_arr[i].pass == passwrd)
+                 {
+                    loginSuccss = true;
+                    break;
+                }
+                else {
+                    loginSuccss = false;
+                }
+            }
+            if (loginSuccss) {
+                alert("login Success");
+                window.location.href = "card2.html"
+            }
+            else {
+                alert("invalid details");
+            }
+        })
+
+    }
+
+    function company() {
+        document.querySelector(".form2").style.display = "block"
+        document.querySelector(".form").style.display = "none"
+        document.querySelector(".form1").style.display = "none"
+        // get company valu through backhand ...
+        company_Register_arr = JSON.parse(localStorage.getItem("company_Register_arr"))||[];
+        document.querySelector("#api-option").textContent = "";
+        var divL = document.createElement("div");
+        divL.setAttribute("id", "fb")
+        var icon = document.createElement("i")
+        icon.setAttribute("class", "fab fa-linkedin")
+        var btnL = document.createElement("button")
+        btnL.textContent = "LOGIN WITH LINKEDIN"
+        divL.append(icon, btnL)
+        document.querySelector("#api-option").append(divL);
+
+        document.querySelector(".form2").addEventListener("submit", function () {
+            alert("dfsfd")
+            event.preventDefault();
+            var emailnumber = document.querySelector("#email2").value;
+            var passwrd = document.querySelector("#password2").value;
+            var loginSuccss = true;
+            for (var i = 0; i < company_Register_arr.length; i++) {
+                console.log(emailnumber,passwrd)
+
+                if ((company_Register_arr[i].email == emailnumber || company_Register_arr[i].phone == emailnumber) && company_Register_arr[i].pass == passwrd) {
+                    loginSuccss = true;
+                    break;
+                }
+                else {
+                    loginSuccss = false;
+                }
+            }
+            if (loginSuccss) {
+                alert("login Success");
+                window.location.href = "card2.html"
+            }
+            else {
+                alert("invalid details");
+            }
+        })
+    }
+
+</script>

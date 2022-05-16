@@ -25,8 +25,6 @@ new pages showing all  new product.
 ![more page](https://i.imgur.com/OGf4Npj.png)
 ![Course_page](https://i.imgur.com/TjfW6Jb.png)
 
-![checkout page](https://i.imgur.com/wAXdmKG.png)
-Checkout page with total amount of all the cart products.
 
 ## Features
  
